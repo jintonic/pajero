@@ -35,7 +35,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E111)
+let E2 = @avg(E3:E113)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -320,21 +320,39 @@ let E32 = (B32-B31)/C32
 let F32 = 143
 let G32 = 4091
 let H32 = G32/10000+H31
-leftstring A34 = "# daily"
-leftstring B34 = "mileage"
-leftstring C34 = "[km]"
-leftstring D34 = "..."
-leftstring E34 = "..."
-leftstring F34 = "..."
-leftstring G34 = "..."
-let H34 = (B32-B2)/((A32-A2)/24/3600)
-leftstring A35 = "# daily"
-leftstring B35 = "cost"
-leftstring C35 = "of"
-leftstring D35 = "fuel"
-leftstring E35 = "[yen]"
-leftstring F35 = "..."
-leftstring G35 = "..."
-let H35 = (H32-H2)/((A32-A2)/24/3600)*10000
-fmt H35 "0"
-goto H36 A0
+let A33 = @dts(2013,6,6)
+fmt A33 "%F"
+let B33 = 27349
+let C33 = 23.92
+let D33 = 34
+let E33 = (B33-B32)/C33
+let F33 = 141
+let G33 = 3373
+let H33 = G33/10000+H32
+let A34 = @dts(2013,6,16)
+fmt A34 "%F"
+let B34 = 27895
+let C34 = 29.46
+let D34 = 34
+let E34 = (B34-B33)/C34
+let F34 = 143
+let G34 = 4213
+let H34 = G34/10000+H33
+leftstring A36 = "# daily"
+leftstring B36 = "mileage"
+leftstring C36 = "[km]"
+leftstring D36 = "..."
+leftstring E36 = "..."
+leftstring F36 = "..."
+leftstring G36 = "..."
+let H36 = (B34-B2)/((A34-A2)/24/3600)
+leftstring A37 = "# daily"
+leftstring B37 = "cost"
+leftstring C37 = "of"
+leftstring D37 = "fuel"
+leftstring E37 = "[yen]"
+leftstring F37 = "..."
+leftstring G37 = "..."
+let H37 = (H34-H2)/((A34-A2)/24/3600)*10000
+fmt H37 "0"
+goto H38 A0

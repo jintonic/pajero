@@ -2,6 +2,7 @@
 # You almost certainly shouldn't edit it.
 
 set numeric tblstyle = latex craction = 1
+format 5 = "%F"
 format A 10 0 0
 format B 8 0 0
 format C 6 2 0
@@ -35,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E113)
+let E2 = @avg(E3:E120)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -338,21 +339,85 @@ let E34 = (B34-B33)/C34
 let F34 = 143
 let G34 = 4213
 let H34 = G34/10000+H33
-leftstring A36 = "# daily"
-leftstring B36 = "mileage"
-leftstring C36 = "[km]"
-leftstring D36 = "..."
-leftstring E36 = "..."
-leftstring F36 = "..."
-leftstring G36 = "..."
-let H36 = (B34-B2)/((A34-A2)/24/3600)
-leftstring A37 = "# daily"
-leftstring B37 = "cost"
-leftstring C37 = "of"
-leftstring D37 = "fuel"
-leftstring E37 = "[yen]"
-leftstring F37 = "..."
-leftstring G37 = "..."
-let H37 = (H34-H2)/((A34-A2)/24/3600)*10000
-fmt H37 "0"
-goto H38 A0
+let A35 = @dts(2013,6,22)
+fmt A35 "%F"
+let B35 = 28276
+let C35 = 21.35
+let D35 = 34
+let E35 = (B35-B34)/C35
+let F35 = 143
+let G35 = 3053
+let H35 = G35/10000+H34
+let A36 = @dts(2013,6,30)
+fmt A36 "%F"
+let B36 = 28689
+let C36 = 22.4
+let D36 = 34
+let E36 = (B36-B35)/C36
+let F36 = 144
+let G36 = 3226
+let H36 = G36/10000+H35
+let A37 = @dts(2013,7,18)
+fmt A37 "%F"
+let B37 = 29213
+let C37 = 28.15
+let D37 = 34
+let E37 = (B37-B36)/C37
+let F37 = 150
+let G37 = 4251
+let H37 = G37/10000+H36
+let A38 = @dts(2013,7,27)
+fmt A38 "%F"
+let B38 = 29795
+let C38 = 32.47
+let D38 = 34
+let E38 = (B38-B37)/C38
+let F38 = 149
+let G38 = 4839
+let H38 = G38/10000+H37
+let A39 = @dts(2013,8,6)
+fmt A39 "%F"
+let B39 = 30359
+let C39 = 29.21
+let D39 = 34
+let E39 = (B39-B38)/C39
+let F39 = 152
+let G39 = 4440
+let H39 = G39/10000+H38
+let A40 = @dts(2013,8,21)
+fmt A40 "%F"
+let B40 = 30904
+let C40 = 30.29
+let D40 = 34
+let E40 = (B40-B39)/C40
+let F40 = 151
+let G40 = 4574
+let H40 = G40/10000+H39
+rightstring I40 = "summer tires"
+let A41 = @dts(2013,9,1)
+fmt A41 "%F"
+let B41 = 31362
+let C41 = 25.1
+let D41 = 34
+let E41 = (B41-B40)/C41
+let F41 = 151
+let G41 = 3790
+let H41 = G41/10000+H40
+leftstring A43 = "# daily"
+leftstring B43 = "mileage"
+leftstring C43 = "[km]"
+leftstring D43 = "..."
+leftstring E43 = "..."
+leftstring F43 = "..."
+leftstring G43 = "..."
+let H43 = (B41-B2)/((A41-A2)/24/3600)
+leftstring A44 = "# daily"
+leftstring B44 = "cost"
+leftstring C44 = "of"
+leftstring D44 = "fuel"
+leftstring E44 = "[yen]"
+leftstring F44 = "..."
+leftstring G44 = "..."
+let H44 = (H41-H2)/((A41-A2)/24/3600)*10000
+fmt H44 "0"
+goto A40 A0

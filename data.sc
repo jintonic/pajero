@@ -36,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E120)
+let E2 = @avg(E3:E126)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -403,21 +403,75 @@ let E41 = (B41-B40)/C41
 let F41 = 151
 let G41 = 3790
 let H41 = G41/10000+H40
-leftstring A43 = "# daily"
-leftstring B43 = "mileage"
-leftstring C43 = "[km]"
-leftstring D43 = "..."
-leftstring E43 = "..."
-leftstring F43 = "..."
-leftstring G43 = "..."
-let H43 = (B41-B2)/((A41-A2)/24/3600)
-leftstring A44 = "# daily"
-leftstring B44 = "cost"
-leftstring C44 = "of"
-leftstring D44 = "fuel"
-leftstring E44 = "[yen]"
-leftstring F44 = "..."
-leftstring G44 = "..."
-let H44 = (H41-H2)/((A41-A2)/24/3600)*10000
-fmt H44 "0"
-goto A40 A0
+let A42 = @dts(2013,9,13)
+fmt A42 "%F"
+let B42 = 31952
+let C42 = 29.19
+let D42 = 34
+let E42 = (B42-B41)/C42
+let F42 = 153
+let G42 = 4466
+let H42 = G42/10000+H41
+let A43 = @dts(2013,9,28)
+fmt A43 "%F"
+let B43 = 32530
+let C43 = 31.37
+let D43 = 34
+let E43 = (B43-B42)/C43
+let F43 = 150
+let G43 = 4706
+let H43 = G43/10000+H42
+let A44 = @dts(2013,10,9)
+fmt A44 "%F"
+let B44 = 33082
+let C44 = 29.94
+let D44 = 34
+let E44 = (B44-B43)/C44
+let F44 = 147
+let G44 = 4401
+let H44 = G44/10000+H43
+let A45 = @dts(2013,10,20)
+fmt A45 "%F"
+let B45 = 33660
+let C45 = 31.19
+let D45 = 34
+let E45 = (B45-B44)/C45
+let F45 = 149
+let G45 = 4648
+let H45 = G45/10000+H44
+let A46 = @dts(2013,10,30)
+fmt A46 "%F"
+let B46 = 34226
+let C46 = 31.33
+let D46 = 34
+let E46 = (B46-B45)/C46
+let F46 = 151
+let G46 = 4731
+let H46 = G46/10000+H45
+let A47 = @dts(2013,11,8)
+fmt A47 "%F"
+let B47 = 34681
+let C47 = 25.39
+let D47 = 34
+let E47 = (B47-B46)/C47
+let F47 = 147
+let G47 = 3732
+let H47 = G47/10000+H46
+leftstring A49 = "# daily"
+leftstring B49 = "mileage"
+leftstring C49 = "[km]"
+leftstring D49 = "..."
+leftstring E49 = "..."
+leftstring F49 = "..."
+leftstring G49 = "..."
+let H49 = (B47-B2)/((A47-A2)/24/3600)
+leftstring A50 = "# daily"
+leftstring B50 = "cost"
+leftstring C50 = "of"
+leftstring D50 = "fuel"
+leftstring E50 = "[yen]"
+leftstring F50 = "..."
+leftstring G50 = "..."
+let H50 = (H47-H2)/((A47-A2)/24/3600)*10000
+fmt H50 "0"
+goto H49 A0

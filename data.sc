@@ -36,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E126)
+let E2 = @avg(E3:E128)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -457,21 +457,40 @@ let E47 = (B47-B46)/C47
 let F47 = 147
 let G47 = 3732
 let H47 = G47/10000+H46
-leftstring A49 = "# daily"
-leftstring B49 = "mileage"
-leftstring C49 = "[km]"
-leftstring D49 = "..."
-leftstring E49 = "..."
-leftstring F49 = "..."
-leftstring G49 = "..."
-let H49 = (B47-B2)/((A47-A2)/24/3600)
-leftstring A50 = "# daily"
-leftstring B50 = "cost"
-leftstring C50 = "of"
-leftstring D50 = "fuel"
-leftstring E50 = "[yen]"
-leftstring F50 = "..."
-leftstring G50 = "..."
-let H50 = (H47-H2)/((A47-A2)/24/3600)*10000
-fmt H50 "0"
-goto H49 A0
+let A48 = @dts(2013,11,17)
+fmt A48 "%F"
+let B48 = 35061
+let C48 = 22.04
+let D48 = 34
+let E48 = (B48-B47)/C48
+let F48 = 145
+let G48 = 3196
+let H48 = G48/10000+H47
+let A49 = @dts(2013,11,26)
+fmt A49 "%F"
+let B49 = 35577
+let C49 = 30.6
+let D49 = 34
+let E49 = (B49-B48)/C49
+let F49 = 146
+let G49 = 4468
+let H49 = G49/10000+H48
+rightstring I49 = "snow tires"
+leftstring A51 = "# daily"
+leftstring B51 = "mileage"
+leftstring C51 = "[km]"
+leftstring D51 = "..."
+leftstring E51 = "..."
+leftstring F51 = "..."
+leftstring G51 = "..."
+let H51 = (B47-B2)/((A47-A2)/24/3600)
+leftstring A52 = "# daily"
+leftstring B52 = "cost"
+leftstring C52 = "of"
+leftstring D52 = "fuel"
+leftstring E52 = "[yen]"
+leftstring F52 = "..."
+leftstring G52 = "..."
+let H52 = (H47-H2)/((A47-A2)/24/3600)*10000
+fmt H52 "0"
+goto I50 A0

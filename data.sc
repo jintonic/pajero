@@ -7,7 +7,7 @@ format A 10 0 0
 format B 8 0 0
 format C 6 2 0
 format D 6 2 0
-format E 12 2 0
+format E 11 2 0
 format F 11 2 0
 format G 6 0 0
 format H 11 2 0
@@ -18,7 +18,7 @@ leftstring A0 = "date of"
 rightstring B0 = "mileage"
 rightstring C0 = "added"
 rightstring D0 = "after"
-rightstring E0 = "consumption"
+rightstring E0 = "efficiency"
 rightstring F0 = "unit price"
 rightstring G0 = "price"
 rightstring H0 = "total cost"
@@ -471,26 +471,35 @@ fmt A49 "%F"
 let B49 = 35577
 let C49 = 30.6
 let D49 = 34
-let E49 = (B49-B48)/C49
+let E49 = (B49-@nval("B",@myrow-1))/C49
 let F49 = 146
 let G49 = 4468
-let H49 = G49/10000+H48
+let H49 = G49/10000+@nval("H",@myrow-1)
 rightstring I49 = "snow tires"
-leftstring A51 = "# daily"
-leftstring B51 = "mileage"
-leftstring C51 = "[km]"
-leftstring D51 = "..."
-leftstring E51 = "..."
-leftstring F51 = "..."
-leftstring G51 = "..."
-let H51 = (B47-B2)/((A47-A2)/24/3600)
+let A50 = @dts(2013,12,5)
+fmt A50 "%F"
+let B50 = 36035
+let C50 = 27.62
+let D50 = 34
+let E50 = (B50-@nval("B",@myrow-1))/C50
+let F50 = 145
+let G50 = 4005
+let H50 = G50/10000+@nval("H",@myrow-1)
 leftstring A52 = "# daily"
-leftstring B52 = "cost"
-leftstring C52 = "of"
-leftstring D52 = "fuel"
-leftstring E52 = "[yen]"
+leftstring B52 = "mileage"
+leftstring C52 = "[km]"
+leftstring D52 = "..."
+leftstring E52 = "..."
 leftstring F52 = "..."
 leftstring G52 = "..."
-let H52 = (H47-H2)/((A47-A2)/24/3600)*10000
-fmt H52 "0"
-goto I50 A0
+let H52 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+leftstring A53 = "# daily"
+leftstring B53 = "cost"
+leftstring C53 = "of"
+leftstring D53 = "fuel"
+leftstring E53 = "[yen]"
+leftstring F53 = "..."
+leftstring G53 = "..."
+let H53 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
+fmt H53 "0"
+goto A50 A0

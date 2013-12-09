@@ -2,7 +2,7 @@
 set title "" offset 0.000000,0.000000  font ""
 set xlabel "mileage [10,000 km]" offset 0.000000,0.000000  font ""
 set xrange [ * : * ] noreverse nowriteback
-set ylabel "fuel consumption [km/L]" offset 0.000000,0.000000  font ""
+set ylabel "efficiency of fuel usage [km/L]" offset 0.000000,0.000000  font ""
 set yrange [ 10 : 25 ] noreverse nowriteback
 set lmargin -1
 set bmargin -1
@@ -10,21 +10,21 @@ set rmargin -1
 set tmargin -1
 set size 1.8, 1.2
 set terminal postscript eps "Times" 32 # define size of fonts on the picture
-set output 'consumption.eps'
+set output 'eff.eps'
 plot "data.txt" every ::2 using ($2/10000):5 notitle with line
 set output # important! close output file
 
 set title "" offset 0.000000,0.000000  font ""
 set xlabel "" offset 0.000000,0.000000  font ""
 set xrange [ * : * ] noreverse nowriteback
-set ylabel "fuel consumption [km/L]" offset 0.000000,0.000000  font ""
+set ylabel "efficiency of fuel usage [km/L]" offset 0.000000,0.000000  font ""
 set yrange [ 10 : 25 ] noreverse nowriteback
 set lmargin -1
 set bmargin -1
 set rmargin -1
 set tmargin -1
 set size 1.8, 1.2
-set output 'consumpVStime.eps'
+set output 'effVStime.eps'
 set xdata time
 set timefmt "%Y-%m-%d"
 set format x "%Y\n%m/%d"

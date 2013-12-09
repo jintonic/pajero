@@ -2,25 +2,25 @@ basename=pajero
 
 .PHONY: xpdf xdvi dvi ps clean Clean plot
 
-data.txt:
-	sc data.sc
+dvi:*.eps data.tab
+	latexmk -dvi ${basename}
+xpdf:*.eps data.tab
+	latexmk -pdf -pvc ${basename}
+pdf:*.eps data.tab
+	latexmk -pdf ${basename}
+xdvi:*.eps data.tab
+	latexmk -dvi -pvc ${basename}
+ps:*.eps data.tab
+	latexmk -ps ${basename}
 *.eps:data.txt
 	gnuplot data.gnu
-xpdf:*.eps
-	latexmk -pdf -pvc ${basename}
-pdf:*.eps
-	latexmk -pdf ${basename}
-xdvi:*.eps
-	latexmk -dvi -pvc ${basename}
-dvi:*.eps
-	latexmk -dvi ${basename}
-ps:*.eps
-	latexmk -ps ${basename}
-plot:
-	gnuplot data.gnu
 	root -l -b -q cost.C
+data.tab:data.lat
+	reformat.sed $^ > data.tab
+data.lat data.txt:
+	sc data.sc
 clean:
 	latexmk -C
 	rm -f *convert*.pdf *~
 Clean:clean
-	rm -f *.eps *.txt *.lat
+	rm -f *.eps *.txt *.lat *.tab

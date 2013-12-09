@@ -1,6 +1,8 @@
 % $Id: pajero.tex,v 1.5 2012/11/05 01:00:12 jingliu Exp jingliu $
 \documentclass[12pt, a4paper]{article}
 
+\usepackage{longtable}
+
 %provide \layout macro to show current page layout
 \usepackage[reals]{layout} 
 
@@ -95,19 +97,16 @@
 \section{Raw data}
 \label{s:data}
 
-\begin{table}[htbp]
-  \centering
-  \rowcolors{2}{lightgray}{white}
-  \input{data.lat}
-\caption{Raw data.}
-\label{t:raw}
-\end{table}
+\begin{center}
+  \rowcolors{4}{white}{lightgray}
+  \input{data.tab}
+\end{center}
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{pie}
-\caption{Pie chart of costs.}
-\label{f:pie}
+  \centering
+  \includegraphics[width=\textwidth]{pie}
+  \caption{Pie chart of costs.}
+  \label{f:pie}
 \end{figure}
 
 \section{Mileage}
@@ -116,29 +115,29 @@
 Fig.~\ref{f:mile} shows the mileage of this car over time.
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{mileage}
-\caption{Mileage.}
-\label{f:mile}
+  \centering
+  \includegraphics[width=\textwidth]{mileage}
+  \caption{Mileage.}
+  \label{f:mile}
 \end{figure}
 
-\section{fuel consumption}
-\label{s:cons}
+\section{Efficiency of fuel usage}
+\label{s:eff}
 
-Fig.~\ref{f:cons} shows the fuel consumption as mileage goes up.
+Fig.~\ref{f:eff} shows the efficiency of fuel usage as mileage goes up.
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{consumption}
-\caption{Fuel consumption versus mileage.}
-\label{f:cons}
+  \centering
+  \includegraphics[width=\textwidth]{eff}
+  \caption{Efficiency of fuel usage versus mileage.}
+  \label{f:eff}
 \end{figure}
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{consumpVStime}
-\caption{Fuel consumption over time.}
-\label{f:cont}
+  \centering
+  \includegraphics[width=\textwidth]{effVStime}
+  \caption{Efficiency of fuel usage over time.}
+  \label{f:cont}
 \end{figure}
 
 
@@ -146,21 +145,21 @@ Fig.~\ref{f:cons} shows the fuel consumption as mileage goes up.
 \label{s:cost}
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{fuelprice}
-\caption{Unit price of fuel over time.}
-\label{f:unit}
+  \centering
+  \includegraphics[width=\textwidth]{fuelprice}
+  \caption{Unit price of fuel over time.}
+  \label{f:unit}
 \end{figure}
 
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=\textwidth]{fuelcost}
-\caption{Total cost of fuel over time.}
-\label{f:cost}
+  \centering
+  \includegraphics[width=\textwidth]{fuelcost}
+  \caption{Total cost of fuel over time.}
+  \label{f:cost}
 \end{figure}
 
 %\clearpage
- 
+
 %\addcontentsline{toc}{section}{Bibliography}
 
 %\begin{thebibliography}{99}

@@ -36,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E129)
+let E2 = @avg(E3:E130)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -264,7 +264,7 @@ let E26 = (B26-B25)/C26
 let F26 = 143
 let G26 = 2680
 let H26 = G26/10000+H25
-rightstring I26 = "bleeding"
+leftstring I26 = "press gas paddle to its end"
 let A27 = @dts(2013,3,31)
 fmt A27 "%F"
 let B27 = 24697
@@ -495,21 +495,31 @@ let F51 = 146
 let G51 = 4176
 let H51 = G51/10000+@nval("H",@myrow-1)
 rightstring I51 = "oil change"
-leftstring A53 = "# daily"
-leftstring B53 = "mileage"
-leftstring C53 = "[km]"
-leftstring D53 = "..."
-leftstring E53 = "..."
-leftstring F53 = "..."
-leftstring G53 = "..."
-let H53 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+let A52 = @dts(2013,12,25)
+fmt A52 "%F"
+let B52 = 36876
+let C52 = 25.89
+let D52 = 34
+let E52 = (B52-@nval("B",@myrow-1))/C52
+let F52 = 146
+let G52 = 3781
+let H52 = G52/10000+@nval("H",@myrow-1)
+rightstring I52 = "4 w all time"
 leftstring A54 = "# daily"
-leftstring B54 = "cost"
-leftstring C54 = "of"
-leftstring D54 = "fuel"
-leftstring E54 = "[yen]"
+leftstring B54 = "mileage"
+leftstring C54 = "[km]"
+leftstring D54 = "..."
+leftstring E54 = "..."
 leftstring F54 = "..."
 leftstring G54 = "..."
-let H54 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
-fmt H54 "0"
-goto I50 A0
+let H54 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+leftstring A55 = "# daily"
+leftstring B55 = "cost"
+leftstring C55 = "of"
+leftstring D55 = "fuel"
+leftstring E55 = "[yen]"
+leftstring F55 = "..."
+leftstring G55 = "..."
+let H55 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
+fmt H55 "0"
+goto I52 A0

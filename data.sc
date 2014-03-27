@@ -36,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E137)
+let E2 = @avg(E3:E139)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -568,21 +568,39 @@ let E59 = (B59-@nval("B",@myrow-1))/C59
 let F59 = 149
 let G59 = 4735
 let H59 = G59/10000+@nval("H",@myrow-1)
-leftstring A61 = "# daily"
-leftstring B61 = "mileage"
-leftstring C61 = "[km]"
-leftstring D61 = "..."
-leftstring E61 = "..."
-leftstring F61 = "..."
-leftstring G61 = "..."
-let H61 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
-leftstring A62 = "# daily"
-leftstring B62 = "cost"
-leftstring C62 = "of"
-leftstring D62 = "fuel"
-leftstring E62 = "[yen]"
-leftstring F62 = "..."
-leftstring G62 = "..."
-let H62 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
-fmt H62 "0"
-goto B58 A39
+let A60 = @dts(2014,3,8)
+fmt A60 "%F"
+let B60 = 40144
+let C60 = 31.18
+let D60 = 34
+let E60 = (B60-@nval("B",@myrow-1))/C60
+let F60 = 148
+let G60 = 4615
+let H60 = G60/10000+@nval("H",@myrow-1)
+let A61 = @dts(2014,3,26)
+fmt A61 "%F"
+let B61 = 40673
+let C61 = 33.58
+let D61 = 34
+let E61 = (B61-@nval("B",@myrow-1))/C61
+let F61 = 150
+let G61 = 5037
+let H61 = G61/10000+@nval("H",@myrow-1)
+leftstring A63 = "# daily"
+leftstring B63 = "mileage"
+leftstring C63 = "[km]"
+leftstring D63 = "..."
+leftstring E63 = "..."
+leftstring F63 = "..."
+leftstring G63 = "..."
+let H63 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+leftstring A64 = "# daily"
+leftstring B64 = "cost"
+leftstring C64 = "of"
+leftstring D64 = "fuel"
+leftstring E64 = "[yen]"
+leftstring F64 = "..."
+leftstring G64 = "..."
+let H64 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
+fmt H64 "0"
+goto E16 A0

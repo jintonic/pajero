@@ -3,7 +3,7 @@
       86,
       0.21+8.016+0.098+(0.0665+0.301)+0.3535, // adjust beam of head light + winder tires + mirror + oil change + oil change&filter
       1.2395+0.521+0.5*24, // 2 years of parking
-      22.06, // fuel consumption till now
+      22.52, // fuel consumption till now
       10.68, // 2 years of insurance
       0.1435+0.66+2.197, // 1 inspection
       0.72*2, // 2 years of tax

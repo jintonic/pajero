@@ -36,7 +36,7 @@ fmt A2 "%F"
 let B2 = 15121
 let C2 = 27.33
 let D2 = 34
-let E2 = @avg(E3:E143)
+let E2 = @avg(E3:E144)
 let F2 = 134
 let G2 = 3662
 let H2 = G2/10000
@@ -622,21 +622,30 @@ let E65 = (B65-@nval("B",@myrow-1))/C65
 let F65 = 157
 let G65 = 4750
 let H65 = G65/10000+@nval("H",@myrow-1)
-leftstring A67 = "# daily"
-leftstring B67 = "mileage"
-leftstring C67 = "[km]"
-leftstring D67 = "..."
-leftstring E67 = "..."
-leftstring F67 = "..."
-leftstring G67 = "..."
-let H67 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+let A66 = @dts(2014,5,28)
+fmt A66 "%F"
+let B66 = 43302
+let C66 = 30.96
+let D66 = 34
+let E66 = (B66-@nval("B",@myrow-1))/C66
+let F66 = 159
+let G66 = 4924
+let H66 = G66/10000+@nval("H",@myrow-1)
 leftstring A68 = "# daily"
-leftstring B68 = "cost"
-leftstring C68 = "of"
-leftstring D68 = "fuel"
-leftstring E68 = "[yen]"
+leftstring B68 = "mileage"
+leftstring C68 = "[km]"
+leftstring D68 = "..."
+leftstring E68 = "..."
 leftstring F68 = "..."
 leftstring G68 = "..."
-let H68 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
-fmt H68 "0"
-goto H67 A0
+let H68 = (@nval("B",@myrow-2)-B2)/((@nval("A",@myrow-2)-A2)/24/3600)
+leftstring A69 = "# daily"
+leftstring B69 = "cost"
+leftstring C69 = "of"
+leftstring D69 = "fuel"
+leftstring E69 = "[yen]"
+leftstring F69 = "..."
+leftstring G69 = "..."
+let H69 = (@nval("H",@myrow-3)-H2)/((@nval("A",@myrow-3)-A2)/24/3600)*10000
+fmt H69 "0"
+goto H66 A0

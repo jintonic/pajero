@@ -49,7 +49,7 @@ set title "" offset 0.000000,0.000000  font ""
 set xlabel "" offset 0.000000,0.000000  font ""
 set xrange [ * : * ] noreverse nowriteback
 set ylabel "unit price [yen/L]" offset 0.000000,0.000000  font ""
-set yrange [ 110 : 160 ] noreverse nowriteback
+set yrange [ 110 : 170 ] noreverse nowriteback
 set lmargin -1
 set bmargin -1
 set rmargin -1

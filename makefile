@@ -12,7 +12,7 @@ xdvi:*.eps data.tab
 	latexmk -dvi -pvc ${basename}
 ps:*.eps data.tab
 	latexmk -ps ${basename}
-*.eps:data.txt
+*.eps:data.txt data.gnu
 	gnuplot data.gnu
 	root -l -b -q cost.C
 data.tab:data.lat
